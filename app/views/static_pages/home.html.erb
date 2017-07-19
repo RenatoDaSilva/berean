@@ -1,19 +1,10 @@
-<% if logged_in? %>
-    <div class="row">
-      <aside class="col-md-4">
-        <section class="user_info">
-          <%= render 'shared/user_info' %>
-        </section>
-      </aside>
-    </div>
-<% else %>
-    <div class="center jumbotron">
-      <h1>Bem vindo ao App de Exemplo</h1>
+<div class="center jumbotron">
+  <h1>Bem vindo ao Berean</h1>
 
-      <h2>
-        Esta é a página para o aplicativo de exemplo do
-        <a href="http://www.railstutorial.org/">Tutorial do Ruby on Rails</a>.
-      </h2>
+  <h2>
+    O Berean é um aplicativo para gestão de igrejas e outras organizações
+    que se assemelham a igrejas, tais como associações ou agremiações
+  </h2>
 
       <%= link_to 'Inscreva-se agora!', signup_path, class: 'btn btn-lg btn-primary' %>
     </div>
