@@ -6,6 +6,12 @@
         <%= gravatar_for @user %>
         <%= @user.name %>
       </h1>
+      <% if @user.church_id? %>
+          <BR>
+      <h2>
+        <%= Church.find(@user.church_id).name %>
+      </h2>
+        <% end %>
     </section>
   </aside>
 </div>

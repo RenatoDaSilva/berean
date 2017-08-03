@@ -18,7 +18,10 @@
       <%= f.label :password_confirmation, 'Confirmar senha' %>
       <%= f.password_field :password_confirmation, class: 'form-control' %>
 
-      <%= f.submit 'Criar minha conta', class: 'btn btn-primary' %>
+        <%= f.label :church_id, 'Igreja' %>
+        <%= f.select(:church_id, options_from_collection_for_select(Church.all, 'id', 'name')) %>
+
+        <%= f.submit 'Criar minha conta', class: 'btn btn-primary' %>
     <% end %>
   </div>
 </div>

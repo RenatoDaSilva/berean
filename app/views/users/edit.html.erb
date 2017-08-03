@@ -15,10 +15,15 @@
       <%= f.label :password, 'Senha' %>
       <%= f.password_field :password, class: 'form-control' %>
 
-      <%= f.label :password_confirmation, 'Confirmação' %>
-      <%= f.password_field :password_confirmation, class: 'form-control' %>
+        <%= f.label :password_confirmation, 'Confirmação' %>
+        <%= f.password_field :password_confirmation, class: 'form-control' %>
 
-      <%= f.submit 'Salvar alterações', class: 'btn btn-primary' %>
+        <% if current_user.admin? %>
+          <%= f.label :church_id, 'Igreja' %>
+          <%= f.select(:church_id, options_from_collection_for_select(Church.all, 'id', 'name')) %>
+        <% end %>
+
+         <%= f.submit 'Salvar alterações', class: 'btn btn-primary' %>
     <% end %>
 
     <div class='gravatar_edit'>

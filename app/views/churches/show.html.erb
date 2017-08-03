@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @church.name %>
+</p>
+
+<p>
+  <strong>CNPJ:</strong>
+  <%= @church.cnpj %>
+</p>
+
+<p>
+  <strong>Endereço:</strong>
+  <%= @church.address %>
+</p>
+
+<p>
+  <strong>Cidade-UF:</strong>
+  <%= @church.city + " - " + @church.state %>
+</p>
+
+<%= link_to 'Editar', edit_church_path(@church) %> |
+<%= link_to 'Voltar', churches_path %>

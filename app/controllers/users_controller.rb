@@ -26,9 +26,6 @@ class UsersController < ApplicationController
     end
   end
 
-  def edit
-  end
-
   def update
     if @user.update_attributes(user_params)
       flash[:success] = 'Cadastro atualizado'
@@ -48,7 +45,7 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:name, :email, :password,
-                                 :password_confirmation)
+                                 :password_confirmation, :church_id)
   end
 
   # Before filters

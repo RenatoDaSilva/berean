@@ -56,7 +56,6 @@
     <orderEntry type="library" scope="PROVIDED" name="fog-aliyun (v0.1.0, rbenv: 2.4.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="fog-atmos (v0.1.0, rbenv: 2.4.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="fog-aws (v1.4.0, rbenv: 2.4.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="fog-brightbox (v0.11.0, rbenv: 2.4.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="fog-cloudatcost (v0.1.2, rbenv: 2.4.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="fog-core (v1.44.3, rbenv: 2.4.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="fog-digitalocean (v0.3.0, rbenv: 2.4.0) [gem]" level="application" />

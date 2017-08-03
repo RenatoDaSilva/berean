@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Igrejas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Npme</th>
+      <th>Cnpj</th>
+      <th>Endereço</th>
+      <th>Cidade-UF</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @churches.each do |church| %>
+      <tr>
+        <td><%= church.name %></td>
+        <td><%= church.cnpj %></td>
+        <td><%= church.address %></td>
+        <td><%= church.city + " - " + church.state %></td>
+        <td><%= link_to 'Mostrar', church %></td>
+        <td><%= link_to 'Editar', edit_church_path(church) %></td>
+        <td><%= link_to 'Excluir', church, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Incluir Igreja', new_church_path %>

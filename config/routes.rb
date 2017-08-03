@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :churches
   get 'password_resets/new'
 
   get 'password_resets/edit'

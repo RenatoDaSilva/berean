@@ -1,0 +1,48 @@
+<%= form_for(church) do |f| %>
+  <% if church.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(church.errors.count, "error") %> prohibited this church from being saved:</h2>
+
+      <ul>
+      <% church.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label "Nome" %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label "CNPJ" %>
+    <%= f.text_field :cnpj %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Endereço" %>
+    <%= f.text_field :address %>
+  </div>
+
+    <div class="field">
+      <%= f.label "Cidade" %>
+      <%= f.text_field :city %>
+    </div>
+
+     <div class="field">
+    <%= f.label "Estado" %>
+    <%= f.select :state, options_for_select([["Acre", "AC"],["Alagoas", "AL"],["Amapá", "AP"],
+      ["Amazonas", "AM"],["Bahia", "BA"],["Ceará", "CE"],["Distrito Federal", "DF"],
+      ["Espírito Santo", "ES"],["Goiás", "GO"],["Maranhão", "MA"],["Mato Grosso", "MT"],
+      ["Mato Grosso do Sul", "MS"],["Minas Gerais", "MG"],["Pará", "PA"],["Paraíba", "PB"],
+      ["Paraná", "PR"],["Pernambuco", "PE"],["Piauí", "PI"],["Rio de Janeiro", "RJ"],
+      ["Rio Grande do Norte", "RN"],["Rio Grande do Sul", "RS"],["Rondônia", "RO"],["Roraima", "RR"],
+      ["Santa Catarina", "SC"],["São Paulo", "SP"],["Sergipe", "SE"],["Tocantins", "TO"]], :selected => @church.state ) %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Gravar" %>
+  </div>
+<% end %>
