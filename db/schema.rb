@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170726025024) do
+ActiveRecord::Schema.define(version: 20170815013051) do
 
   create_table "churches", force: :cascade do |t|
     t.string   "name"
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20170726025024) do
     t.string   "reset_digest"
     t.datetime "reset_sent_at"
     t.integer  "church_id"
+    t.integer  "user_level"
   end
 
 end
